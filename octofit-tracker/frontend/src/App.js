@@ -5,8 +5,8 @@ import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
-import logo from './logo.svg';
 import './App.css';
+import logo from './octofitapp-small.png';
 
 function App() {
   return (
@@ -14,7 +14,10 @@ function App() {
       <div className="App">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">OctoFit Tracker</Link>
+            <div className="logo">
+              <img src={logo} alt="OctoFit Logo" />
+              <Link className="navbar-brand" to="/">OctoFit Tracker</Link>
+            </div>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -46,7 +49,7 @@ function App() {
             <Route path="/teams" element={<Teams />} />
             <Route path="/users" element={<Users />} />
             <Route path="/workouts" element={<Workouts />} />
-            <Route path="/" element={<h1>Welcome to OctoFit Tracker</h1>} />
+            <Route path="/" element={<h1 className="display-4 text-center">Welcome to OctoFit Tracker</h1>} />
           </Routes>
         </div>
       </div>
